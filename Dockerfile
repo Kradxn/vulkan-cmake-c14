@@ -3,7 +3,7 @@ FROM ubuntu:17.10
 ENV	VULKAN_VERSION="1.0.61.1"
 
 RUN apt-get update && \
-	apt-get install -y cmake git gcc g++ wget xz-utils xorg-dev libxrandr-dev libglu1-mesa-dev --fix-missing && \
+	apt-get install -y cmake git gcc g++ wget xz-utils libxcb-dri3-dev libx11-dev libmirclient-dev libglu1-mesa-dev --fix-missing && \
     wget -O VulkanSDK.run https://vulkan.lunarg.com/sdk/download/${VULKAN_VERSION}/linux/vulkansdk-linux-x86_64-${VULKAN_VERSION}.run && \
 	chmod ugo+x VulkanSDK.run && \
     ./VulkanSDK.run --noprogress && \
