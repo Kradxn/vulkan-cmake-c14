@@ -5,7 +5,7 @@ ENV	VULKAN_VERSION="1.0.61.1"
 RUN apt-get update && \
 	apt-get dist-upgrade && \
 	apt-get install -y cmake git gcc g++ wget xz-utils libglm-dev graphviz libxcb-dri3-0 libxcb-present0 libpciaccess0 \
-libpng-dev libxcb-dri3-dev libx11-dev libmirclient-dev libwayland-dev libxrandr-dev libglu1-mesa-dev --fix-missing && \
+libpng-dev libxcb-dri3-dev libx11-dev libmirclient-dev libwayland-dev libxrandr-dev libxinerama-dev libglu1-mesa-dev --fix-missing && \
     wget -O VulkanSDK.run https://vulkan.lunarg.com/sdk/download/${VULKAN_VERSION}/linux/vulkansdk-linux-x86_64-${VULKAN_VERSION}.run && \
 	chmod ugo+x VulkanSDK.run && \
     ./VulkanSDK.run --noprogress && \
