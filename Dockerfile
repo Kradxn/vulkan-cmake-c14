@@ -12,7 +12,7 @@ RUN mkdir vulkan && cd vulkan && wget -O VulkanSDK.tar.gz https://vulkan.lunarg.
     apt-get remove -y wget xz-utils && \
     apt-get autoremove -y
 
-ENV	VULKAN_SDK="/vulkan/x86_64:${VULKAN_SDK}"
+ENV	VULKAN_SDK="/vulkan/${VULKAN_VERSION}/x86_64"
 ENV	PATH="${VULKAN_SDK}/bin:${PATH}"
 ENV	LD_LIBRARY_PATH="${VULKAN_SDK}/lib:${LD_LIBRARY_PATH}"
 ENV	VK_LAYER_PATH="${VULKAN_SDK}/etc/explicit_layer.d:${VK_LAYER_PATH}"
