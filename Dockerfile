@@ -1,6 +1,6 @@
 FROM ubuntu:17.10
 
-ENV	VULKAN_VERSION="1.0.61.1"
+ENV	VULKAN_VERSION="1.1.85.0"
 
 RUN apt-get update && \
 	apt-get dist-upgrade && \
